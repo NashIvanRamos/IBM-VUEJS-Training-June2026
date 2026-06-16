@@ -6,7 +6,7 @@
 -->
 <script setup>
 import { ref } from 'vue'
-import TaskCard_Template_Task2 from '../components/TaskCard_Template_Task2.vue';
+import TaskCard_Task2 from '../components/TaskCard_Template_Task2.vue';
 // TODO 1: Create a ref() tasks array with at least 3 sample tasks
 // Each task: { id, name, done, dueDate }
   const tasks = ref([
