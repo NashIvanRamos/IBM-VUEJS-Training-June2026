@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TaskListView_Task2 from './views/Day2/TaskCard_Template_Task2.vue';
+import TaskListView_Task2 from './views/Day2/TaskListView_Task2.vue';
 </script>
 
 <template>

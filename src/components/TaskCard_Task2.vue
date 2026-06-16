@@ -69,7 +69,7 @@ import { defineProps, defineEmits } from 'vue';
   const props = defineProps({ task: { type: Object, required: true } })
 
 // TODO 3: Define emits for 'complete' and 'delete'
-  const emit = defineEmits([['complete', 'delete']])
+  const emit = defineEmits(['complete', 'delete'])
 </script>
 
 <template>

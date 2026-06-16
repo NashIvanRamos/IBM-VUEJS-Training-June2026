@@ -6,7 +6,7 @@
 -->
 <script setup>
 import { ref } from 'vue'
-import TaskCard_Task2 from '../components/TaskCard_Template_Task2.vue';
+import TaskCard_Task2 from '../../components/TaskCard_Task2.vue'
 // TODO 1: Create a ref() tasks array with at least 3 sample tasks
 // Each task: { id, name, done, dueDate }
   const tasks = ref([
@@ -23,7 +23,7 @@ function handleComplete(id) {
 
 // TODO 3: Write handleDelete(id) — remove the task with this id from the array
 function handleDelete(id) {
-  const task = task.value.filter(t => t.id !== id)
+  tasks.value = tasks.value.filter(t => t.id !== id)
 }
 </script>
 
@@ -37,7 +37,7 @@ function handleDelete(id) {
          - Listen @delete="handleDelete"
          - Fill the "meta" named slot with the due date
     -->  
-         <TaskCard_Template_Task2
+         <TaskCard_Task2
           v-for="task in tasks"
           :key="task.id"
           :task="task"
@@ -47,7 +47,9 @@ function handleDelete(id) {
           <template #meta>
             Due: {{ task.dueDate }}
           </template>
-         </TaskCard_Template_Task2>
+         </TaskCard_Task2>
+
+         <p v-if="tasks.length === 0"> No Task remaining </p>
 
     <!-- Example structure (remove the comment markers and complete it):
     <TaskCard
