@@ -21,5 +21,3 @@ export const useTaskStore = defineStore('task', () => {
     tasks
   }
 })
-
-// Made with Bob

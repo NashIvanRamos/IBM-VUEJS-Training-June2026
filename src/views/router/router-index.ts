@@ -56,13 +56,17 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../Day3/HomeView.vue'
 import TaskDetailView from '../Day3/TaskDetailView.vue'
 import AboutView from '../Day3/AboutView.vue'
-import { useTaskStore } from '../../stores/taskStore'
+import { useTaskStore } from '../../stores/taskStore_Day3.ts'
+import TaskListView from '../Day4/TaskListView.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
   { path: '/home', component: HomeView },
   { path: '/task/:id', component: TaskDetailView, meta: { requiresTask: true } },
   { path: '/about', component: AboutView },
+
+  // Dedicated to Day 4
+  { path: '/tasksDay4', component: TaskListView }
 ]
 
 const router = createRouter({
