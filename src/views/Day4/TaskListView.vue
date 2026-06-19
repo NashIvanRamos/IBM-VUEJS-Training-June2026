@@ -44,6 +44,8 @@ function handleAdd() {
       <button @click="handleAdd">Add</button>
     </div>
 
+    <p class="empty" v-if="tasks.length === 0">No tasks yet! Add one above!</p>
+    
     <!-- TODO 7: Render the task list using tasks from the store -->
     <ul class="task-list">
       <li v-for="task in tasks" :key="task.id">

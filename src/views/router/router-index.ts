@@ -58,6 +58,7 @@ import TaskDetailView from '../Day3/TaskDetailView.vue'
 import AboutView from '../Day3/AboutView.vue'
 import { useTaskStore } from '../../stores/taskStore_Day3.ts'
 import TaskListView from '../Day4/TaskListView.vue'
+import TodoListView from '../Day5/TodoListView.vue'
 
 const routes = [
   { path: '/', redirect: '/home' },
@@ -66,7 +67,10 @@ const routes = [
   { path: '/about', component: AboutView },
 
   // Dedicated to Day 4
-  { path: '/tasksDay4', component: TaskListView }
+  { path: '/tasksDay4', component: TaskListView },
+
+  // Dedicated to Day 5
+  { path: '/todos', component: TodoListView }
 ]
 
 const router = createRouter({
